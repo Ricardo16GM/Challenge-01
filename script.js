@@ -2,6 +2,7 @@ var botonEncriptar = document.querySelector(".btn-encriptar");
 var botonDesencriptar = document.querySelector(".btn-desencriptar");
 var botonCopiar = document.querySelector(".btn-copiar");
 var seccion2 = document.querySelector(".seccion2");
+var titulo3 = document.querySelector(".msj-3")
 
 var containerMuneco = document.querySelector(".container-muneco");
 var containerTitulo = document.querySelector(".container-titulo");
@@ -62,6 +63,7 @@ function encriptarTexto(mensaje) {
 
 function desencriptarTexto(mensaje) {
     seccion2.classList.add("rotate-vertical-center");
+    titulo3.classList.add("ocultar");
     var texto = mensaje;
     var textoFinal = "";
 
