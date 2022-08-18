@@ -2,7 +2,8 @@ var botonEncriptar = document.querySelector(".btn-encriptar");
 var botonDesencriptar = document.querySelector(".btn-desencriptar");
 var botonCopiar = document.querySelector(".btn-copiar");
 var seccion2 = document.querySelector(".seccion2");
-var titulo3 = document.querySelector(".msj-3")
+var titulo3 = document.querySelector(".msj-3");
+var titulo4 = document.querySelector(".msj-4");
 
 var containerMuneco = document.querySelector(".container-muneco");
 var containerTitulo = document.querySelector(".container-titulo");
@@ -14,7 +15,7 @@ var resultadoFinal = document.querySelector(".texto-resultado");
 
 botonEncriptar.onclick = encriptarResultado;
 botonDesencriptar.onclick = desencriptarResultado;
-botonCopiar.onclick = copyToClipBoard;
+botonCopiar.onclick = copiar;
 
 /*====================== fin botones ====================== */ 
 
@@ -33,6 +34,7 @@ function textoObtenido() {
 
 function encriptarTexto(mensaje) {
     seccion2.classList.add("rotate-vertical-center");
+    titulo4.classList.add("ocultar");
     var texto = mensaje;
     var textoFinal = "";
 
@@ -113,7 +115,7 @@ function desencriptarResultado() {
 
 }
 
-function copyToClipBoard() {
+function copiar() {
 
     var content = document.getElementById('textArea');
     
@@ -123,6 +125,8 @@ function copyToClipBoard() {
     alert("Copiado! 📗");
     location.reload();
 }
+
+
 
 
 
